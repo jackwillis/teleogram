@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   root 'announcements#create'
 
-  get 'announcements/new'
-  get 'announcements/index'
-  get 'announcements/create'  
+  resources :announcements, only: [:index, :new, :create]
 end
