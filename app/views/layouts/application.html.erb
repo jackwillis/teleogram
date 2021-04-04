@@ -11,18 +11,18 @@
   </head>
 
   <body>
-    <header>
-      Teleogram
-    </header>
-
     <nav>
-      <ul>
-        <li>Compose</li>
-        <li>History</li>
-        <li>Blocks</li>
-        <li>Settings</li>
-        <li>Help</li>
-      </ul>
+      <span class="brand">Teleogram</span>
+
+      <input id="bmenub" type="checkbox" class="show">
+      <label for="bmenub" class="burger pseudo button">Menu</label>
+      <div class="menu">
+        <a class="pseudo button">Compose</a>
+        <a class="pseudo button">History</a>
+        <a class="pseudo button">Blocks</a>
+        <a class="pseudo button">Settings</a>
+        <a class="pseudo button">Help</a>
+      </div>
     </nav>
 
     <%= yield %>
