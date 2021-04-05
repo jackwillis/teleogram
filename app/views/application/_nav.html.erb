@@ -1,5 +1,10 @@
 <nav>
-  <span class="brand">Teleogram</span>
+  <span class="brand">
+    Teleogram
+    <% if ENV['ORGANIZATION_NAME'] %>
+      <small><%= ENV['ORGANIZATION_NAME'] %></small>
+    <% end %>
+  </span>
 
   <input id="bmenub" type="checkbox" class="show">
   <label for="bmenub" class="burger pseudo button">Menu</label>
