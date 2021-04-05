@@ -35,9 +35,12 @@ or [edit config/database.yml](https://guides.rubyonrails.org/configuring.html#co
 
 ### Heroku
 
-This application is ready to deploy on Heroku.
-Make sure to set up environment variables and
-provision a PostgreSQL server, from Heroku or elsewhere.
+To deploy on Heroku, you must:
+1. Configure environment variables.
+2. Provision a PostgreSQL server, from Heroku or elsewhere.
+By default, Heroku will attach a hobby-level PostgreSQL server to your new app instance
+and set the `DATABASE_URL` environment variable automatically.
+3. Run `rails db:create db:migrate` in the production environment.
 
 ## Environment variables
 
