@@ -2,17 +2,17 @@ require "test_helper"
 
 class AnnouncementsControllerTest < ActionDispatch::IntegrationTest
   test "should get new" do
-    get announcements_new_url
+    get root_url
     assert_response :success
   end
 
   test "should get index" do
-    get announcements_index_url
+    get announcements_url
     assert_response :success
   end
 
   test "should get create" do
-    get announcements_create_url
+    get create_announcement_url
     assert_response :success
   end
 end

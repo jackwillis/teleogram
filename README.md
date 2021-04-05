@@ -28,9 +28,10 @@ This application uses your operating system username as the default PostgreSQL r
 [create this role](https://www.postgresql.org/docs/13/sql-createuser.html)
 as a [superuser](https://www.postgresql.org/docs/13/sql-alterrole.html),
 or [edit config/database.yml](https://guides.rubyonrails.org/configuring.html#configuring-a-database).
-4. Create dev and test databases: `bundle exec rails db:create`
+4. Create dev and test databases: `bundle exec rails db:create db:migrate`
 5. Install and compile Javascripts and CSS: `bundle exec rails assets:precompile`
-6. Finally, start development server: `bundle exec rails server` (with environment variables).
+6. Run tests: `bundle exec rails test`
+7. Finally, start development server: `bundle exec rails server` (with environment variables).
 
 ### Heroku
 
@@ -46,4 +47,7 @@ provision a PostgreSQL server, from Heroku or elsewhere.
 
   <dt><code>DATABASE_URL</code></dt>
   <dd>(Production only.) ex. <code>postgres://user:pass@localhost:5432/db</code></dd>
+
+  <dt><code>ORGANIZATION_NAME</code></dt>
+  <dd>(Optional.) Displays in banner at top of application.</dd>
 </dl>
