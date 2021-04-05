@@ -7,3 +7,16 @@
    padding: 4em 1em 2em 1em;
    font-family: 'Source Sans Pro', sans-serif;
  }
+
+.flash {
+  font-weight: bold;
+  animation-duration: 3s;
+}
+
+.flash-notice {
+  animation-name: flash-notice;
+}
+
+@keyframes flash-notice {
+  from { color: darkgreen; background: lightgreen; }
+}

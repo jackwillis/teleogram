@@ -1,6 +1,6 @@
 <h1>Compose mass text</h1>
 
-<%= form_with(url: announcements_url) do |form| %>
+<%= form_with(url: create_announcement_path) do |form| %>
   <p>
     <%= form.label :message, 'Message' %>
     <%= form.text_area :message, size: '80x8' %>
