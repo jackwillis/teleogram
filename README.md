@@ -45,7 +45,7 @@ By default, Heroku will attach a hobby-level PostgreSQL server to your new app i
 and set the `DATABASE_URL` environment variable automatically.
 3. Run `rails db:setup` in the production environment.
 
-## Environment variables
+### Environment variables
 
 <dl>
   <dt><code>RAILS_ENV</code></dt>
@@ -57,3 +57,9 @@ and set the `DATABASE_URL` environment variable automatically.
   <dt><code>ORGANIZATION_NAME</code></dt>
   <dd>(Optional.) Displays in banner at top of application.</dd>
 </dl>
+
+## License
+
+Teleogram is free software released under the [MIT License](LICENSE).
+
+Copyright (c) 2021 Jack Willis
