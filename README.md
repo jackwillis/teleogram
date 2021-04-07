@@ -1,6 +1,6 @@
 # Teleogram
 
-![build status](https://github.com/jackwillis/teleogram/workflows/test.yml/badge.svg)
+![build status](https://github.com/jackwillis/teleogram/actions/workflows/test.yml/badge.svg)
 
 The purpose (*telos*) of this application is to send event announcements
 over SMS to many recipients (mass texting),
