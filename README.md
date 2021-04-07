@@ -1,5 +1,7 @@
 # Teleogram
 
+![build status](https://github.com/jackwillis/teleogram/workflows/test.yml/badge.svg)
+
 The purpose (*telos*) of this application is to send event announcements
 over SMS to many recipients (mass texting),
 while respecting privacy and communication laws.
@@ -23,12 +25,13 @@ and [Yarn](https://yarnpkg.com/getting-started/install).
 
 1. Clone the repository: `git clone https://github.com/jackwillis/teleogram.git; cd teleogram`
 2. Install Ruby dependencies: `bundle install`
-3. Configure PostgreSQL.
-This application uses your operating system username as the default PostgreSQL role:
-[create this role](https://www.postgresql.org/docs/13/sql-createuser.html)
-as a [superuser](https://www.postgresql.org/docs/13/sql-alterrole.html),
+3. Configure development database credentials: the default username/password combination
+used by this application is `postgres`/`postgres`.
+See [`CREATE USER`](https://www.postgresql.org/docs/13/sql-createuser.html)
+and [`ALTER ROLE`](https://www.postgresql.org/docs/13/sql-alterrole.html)
+in the PSQL documentation,
 or [edit config/database.yml](https://guides.rubyonrails.org/configuring.html#configuring-a-database).
-4. Create dev and test databases: `bundle exec rails db:create db:migrate`
+4. Create dev and test databases: `bundle exec rails db:setup`
 5. Install and compile Javascripts and CSS: `bundle exec rails assets:precompile`
 6. Run tests: `bundle exec rails test`
 7. Finally, start development server: `bundle exec rails server` (with environment variables).
@@ -40,7 +43,7 @@ To deploy on Heroku, you must:
 2. Provision a PostgreSQL server, from Heroku or elsewhere.
 By default, Heroku will attach a hobby-level PostgreSQL server to your new app instance
 and set the `DATABASE_URL` environment variable automatically.
-3. Run `rails db:create db:migrate` in the production environment.
+3. Run `rails db:setup` in the production environment.
 
 ## Environment variables
 
