@@ -12,21 +12,23 @@ jobs:
     services:
       postgres:
         image: postgres
-        env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
-        ports: ["5432:5432"]
-        
+
     steps:
     - uses: actions/checkout@v2
+
     - name: Set up Ruby and install gems
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 3.0.0
         bundler-cache: true
+
     - name: Set up database
-      run: RAILS_ENV=test bundle exec rails db:setup
+      run: bundle exec rails db:setup
+      env:
+        RAILS_ENV: test
+
     - name: Compile assets
       run: bundle exec rails assets:precompile
+
     - name: Run tests
       run: bundle exec rails test

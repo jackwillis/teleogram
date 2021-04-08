@@ -23,18 +23,20 @@ and [Yarn](https://yarnpkg.com/getting-started/install).
 
 #### Initializing the application
 
-1. Clone the repository: `git clone https://github.com/jackwillis/teleogram.git; cd teleogram`
-2. Install Ruby dependencies: `bundle install`
-3. Configure development database credentials: the default username/password combination
-used by this application is `postgres`/`postgres`.
-See [`CREATE USER`](https://www.postgresql.org/docs/13/sql-createuser.html)
-and [`ALTER ROLE`](https://www.postgresql.org/docs/13/sql-alterrole.html)
-in the PSQL documentation,
-or [edit config/database.yml](https://guides.rubyonrails.org/configuring.html#configuring-a-database).
-4. Create dev and test databases: `bundle exec rails db:setup`
-5. Install and compile Javascripts and CSS: `bundle exec rails assets:precompile`
-6. Run tests: `bundle exec rails test`
-7. Finally, start development server: `bundle exec rails server` (with environment variables).
+1. Clone the repository.
+ * `git clone https://github.com/jackwillis/teleogram.git`
+ * `cd teleogram`
+2. Create a Postgres superuser role with username/password `postgres`/`postgres`
+or use a different role by
+[changing config/database.yml](https://guides.rubyonrails.org/configuring.html#configuring-a-database).
+3. Server setup tasks:
+ * `bundle install`
+ * `bundle exec rails db:setup`
+ * `bundle exec rails assets:precompile`
+4. Run tests:
+ * `bundle exec rails test`
+5. Finally, start development server (with environment variables):
+ * `bundle exec rails server`
 
 ### Heroku
 
