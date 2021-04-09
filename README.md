@@ -9,7 +9,7 @@ while respecting privacy and communication laws.
 ## Installation
 
 Teleogram is a Ruby on Rails web application.
-This guide is based on Linux.
+This guide is based on Ubuntu.
 
 ### For development
 
@@ -39,11 +39,24 @@ or [edit config/database.yml](https://guides.rubyonrails.org/configuring.html#co
 ### Heroku
 
 To deploy on Heroku, you must:
-1. Configure environment variables.
-2. Provision a PostgreSQL server, from Heroku or elsewhere.
-By default, Heroku will attach a hobby-level PostgreSQL server to your new app instance
-and set the `DATABASE_URL` environment variable automatically.
-3. Run `rails db:setup` in the production environment.
+1. Install Heroku CLI:
+ * `sudo snap install --classic heroku`
+2. Clone repository:
+ * `git clone https://github.com/jackwillis/teleogram.git`
+ * `cd teleogram`
+3. Create Heroku app:
+ * `heroku git:remote -a <APP_NAME>`
+4. Provision a PostgreSQL server.
+Heroku actually does this automatically:
+it will attach a hobby-dev plan PostgreSQL server to your new app instance
+and set the `DATABASE_URL` environment variable.
+5. Set other environment variables:
+ * `heroku config:set RAILS_ENV=production`
+ * `heroku config:set ORGANIZATION_NAME="ACME Corporation"`
+6. Database setup:
+ * `heroku run rails db:setup`
+7. Restart application:
+ * `heroku restart`
 
 ### Environment variables
 
