@@ -50,4 +50,7 @@ Rails.application.configure do
 
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
+
+  config.x.http_username = "foo"
+  config.x.http_password = "bar"
 end
