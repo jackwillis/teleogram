@@ -17,5 +17,4 @@ test:
 
 production:
   <<: *default
-  database: teleogram
   url: <%= ENV['DATABASE_URL'] %>
