@@ -46,6 +46,7 @@ To deploy on Heroku, you must:
  * `cd teleogram`
 3. Create Heroku app:
  * `heroku git:remote -a <APP_NAME>`
+ * `git push heroku main`
 4. Provision a PostgreSQL server.
 Heroku actually does this automatically:
 it will attach a hobby-dev plan PostgreSQL server to your new app instance

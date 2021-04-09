@@ -25,6 +25,8 @@ group :development do
 end
 
 group :test do
+  gem 'minitest-hooks', '~> 1.5'
+
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   gem 'webdrivers'
