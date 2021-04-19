@@ -54,8 +54,7 @@ Heroku actually does this automatically:
 it will attach a hobby-dev plan PostgreSQL server to your new app instance
 and set the `DATABASE_URL` environment variable.
 5. Set other environment variables:
- * `heroku config:set RAILS_ENV=production ORGANIZATION_NAME="ACME Corporation" \`
-   `  HTTP_USERNAME=foo HTTP_PASSWORD=bar`
+ * `heroku config:set RAILS_ENV=production ORGANIZATION_NAME="ACME Corporation" HTTP_USERNAME=foo HTTP_PASSWORD=bar`
 6. Database setup:
  * `heroku run rails db:schema:load`
 7. Restart application:
@@ -70,14 +69,17 @@ and set the `DATABASE_URL` environment variable.
   <dt><code>DATABASE_URL</code></dt>
   <dd>(Production only.) ex. <code>postgres://user:pass@localhost:5432/db</code></dd>
 
-  <dt><code>ORGANIZATION_NAME</code></dt>
-  <dd>(Optional.) Displays in banner at top of application.</dd>
-
   <dt><code>HTTP_USERNAME</code></dt>
   <dd>(Production only.) Application-wide username.</dd>
 
   <dt><code>HTTP_PASSWORD</code></dt>
   <dd>(Production only.) Application-wide password.</dd>
+
+  <dt><code>ORGANIZATION_NAME</code></dt>
+  <dd>(Optional.) Displays in banner at top of application.</dd>
+
+  <dt><code>CANONICAL_HOST</code></dt>
+  <dd>(Optional.) Requests for other host names will be redirected to the canonical host.</dd>
 </dl>
 
 ## License
